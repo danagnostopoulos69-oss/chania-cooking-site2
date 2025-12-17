@@ -38,20 +38,16 @@ nav button {
 /* HERO */
 header {
   min-height:100vh;
-  background:url('hero.jpg') center/cover no-repeat;
-  position:relative;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('hero.jpg'),
+    #111;
+  background-size:cover;
+  background-position:center;
   color:#fff;
   text-align:center;
 }
-header::after {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.55);
-}
 header .inner {
-  position:relative;
-  z-index:2;
   padding:140px 20px;
 }
 
@@ -85,18 +81,18 @@ h2 {
   align-items:center;
 }
 
-/* LUXURY GALLERY */
+/* GALLERY */
 .luxury-gallery {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:30px;
 }
 .luxury-gallery img {
   width:100%;
-  height:420px;
+  height:380px;
   object-fit:cover;
   border-radius:16px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
 }
 
 /* CTA */
@@ -137,8 +133,6 @@ footer {
 /* MOBILE */
 @media(max-width:900px){
   .split { grid-template-columns:1fr; }
-  .luxury-gallery { grid-template-columns:1fr; }
-  .luxury-gallery img { height:320px; }
   .hero-title { font-size:30px; }
 }
 </style>
@@ -171,19 +165,19 @@ footer {
 
 <section>
 <div class="split">
-<img src="chef.jpg" style="width:100%;border-radius:18px">
+<img src="chef.jpg" style="width:100%;border-radius:18px" alt="Private Chefs">
 
 <div class="lang en active">
 <h2>About Us</h2>
 <p>We are two professional private chefs based in Chania, Crete, specializing in high-end, tailor-made dining experiences for villas, private residences and exclusive occasions.</p>
 <p>Our culinary journey includes participation in MasterChef Greece (seasons 7 and 9), an experience that refined our creativity, technical precision and commitment to excellence.</p>
 <p>We combine authentic Greek flavors with modern Mediterranean techniques, focusing on premium seasonal ingredients, refined presentation and balanced menus.</p>
-<p>From menu design and ingredient sourcing to cooking and full kitchen clean-up, we manage every detail — allowing our guests to enjoy a seamless, stress-free dining experience.</p>
+<p>From menu design and sourcing to cooking and full kitchen clean-up, we manage every detail so our guests enjoy a seamless, stress-free experience.</p>
 </div>
 
 <div class="lang gr">
 <h2>Σχετικά με εμάς</h2>
-<p>Είμαστε δύο επαγγελματίες private chefs με έδρα τα Χανιά, με εξειδίκευση σε υψηλού επιπέδου γαστρονομικές εμπειρίες.</p>
+<p>Είμαστε δύο επαγγελματίες private chefs με έδρα τα Χανιά, με συμμετοχή στο MasterChef Ελλάδας (7 & 9).</p>
 </div>
 </div>
 </section>
@@ -195,8 +189,6 @@ footer {
   <img src="images/gallery/2.jpg">
   <img src="images/gallery/3.jpg">
   <img src="images/gallery/4.jpg">
-  <img src="images/gallery/5.jpg">
-  <img src="images/gallery/6.jpg">
 </div>
 </section>
 
@@ -214,9 +206,7 @@ footer {
 </div>
 </section>
 
-<footer>
-© Chania Private Cooking Services
-</footer>
+<footer>© Chania Private Cooking Services</footer>
 
 <a href="https://wa.me/306971620636" class="whatsapp">💬</a>
 
