@@ -1,4 +1,6 @@
-html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +38,7 @@ html lang="en">
   <button onclick="setLang('gr')">GR</button>
 </nav>
 
-<header style="background-image:url('https://scontent.fath6-1.fna.fbcdn.net/v/t39.30808-6/499761304_684945120961464_9203818812221058505_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=bffv7rtZB3kQ7kNvwF7PKxP&_nc_oc=AdlD489NmeTlcKt3Z27DZaUxWrfa-kt2ogmXYh8cqlGInWq356puRGPL836VIh--ei4&_nc_zt=23&_nc_ht=scontent.fath6-1.fna&_nc_gid=6NC2EJ0TlaaQFTQCR8rWaw&oh=00_Afmxff8EM9BQBpl3L2K_-x8mEJov0BJRMaS-D12ESgpH0w&oe=6947D7E5'); background-size:cover; background-position:center;">
+<header style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1800&q=80'); background-size:cover; background-position:center;">
   <nav>
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('gr')">GR</button>
@@ -58,17 +60,24 @@ html lang="en">
 
 <section>
   <div class="split">
-    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80" alt="Private Chef" />
+    <img src="chef.jpg" alt="Private Chef – Chania Private Cooking Services" style="max-width:520px;width:100%;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,0.35)" />
     <div>
       <div class="lang en active">
         <h2>About the Chef</h2>
-        <p>I am a private chef based in Chania, Crete, offering tailor-made culinary experiences for villas, families and special occasions.</p>
+        <p>I am a private chef based in Chania, Crete, specializing in tailor-made dining experiences for villas, private homes, and special occasions. My philosophy is simple: high-quality ingredients, authentic Mediterranean flavors, and attention to every detail.</p>
+        <p>With experience in private dining, family gatherings, romantic dinners, and small events, I create menus fully customized to each guest’s preferences, dietary needs, and occasion. From traditional Greek cuisine to modern Mediterranean dishes, every meal is designed to be memorable and effortless.</p>
+        <p>My goal is to allow you to relax and enjoy your time in Crete while I take care of everything — from menu planning and shopping to cooking, serving, and leaving your kitchen spotless.</p>
       </div>
       <div class="lang gr">
-        <h2>Ο Σεφ</h2>
-        <p>Είμαι private chef με έδρα τα Χανιά και δημιουργώ προσωποποιημένες γαστρονομικές εμπειρίες για βίλες και ξεχωριστές στιγμές.</p>
+        <h2>Σχετικά με εμένα</h2>
+        <p>Είμαι private chef με έδρα τα Χανιά και προσφέρω προσωποποιημένες γαστρονομικές εμπειρίες σε βίλες, ιδιωτικές κατοικίες και ειδικές περιστάσεις. Η φιλοσοφία μου βασίζεται στην ποιότητα των πρώτων υλών, στις αυθεντικές μεσογειακές γεύσεις και στη φροντίδα κάθε λεπτομέρειας.</p>
+        <p>Με εμπειρία σε ιδιωτικά δείπνα, οικογενειακά τραπέζια, ρομαντικά δείπνα και μικρές εκδηλώσεις, δημιουργώ μενού προσαρμοσμένα στις προτιμήσεις, τις διατροφικές ανάγκες και τη μοναδικότητα κάθε περίστασης.</p>
+        <p>Στόχος μου είναι να απολαμβάνετε τον χρόνο σας στην Κρήτη χωρίς άγχος, αναλαμβάνοντας εξ ολοκλήρου τον σχεδιασμό, την προετοιμασία, το μαγείρεμα και την άψογη παράδοση του χώρου.</p>
       </div>
     </div>
+  </div>
+  <div style="margin-top:40px;text-align:center">
+    <img src="brand-image.jpg" alt="Chania Private Cooking Services Brand" style="max-width:420px;width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.25)" />
   </div>
 </section>
 
@@ -125,5 +134,52 @@ html lang="en">
     <p>Email: danagnostopoulos69@gmail.com</p>
     <p>WhatsApp: +30 697 162 0636</p>
     <p><a href="https://www.facebook.com/people/Chania-Private-cooking-services/100083379461033/" target="_blank">Facebook Profile</a></p>
-    <p><a href="https://share.google/KT1OEuOFxpElim98v" target="_blank">Leave a Google Revie
+    <p><a href="https://share.google/KT1OEuOFxpElim98v" target="_blank">Leave a Google Review</a></p>
+  </div>
+  <div class="lang gr">
+    <h2>Επικοινωνία</h2>
+    <p>Email: danagnostopoulos69@gmail.com</p>
+    <p>WhatsApp: +30 697 162 0636</p>
+    <p><a href="https://www.facebook.com/people/Chania-Private-cooking-services/100083379461033/" target="_blank">Facebook</a></p>
+    <p><a href="https://share.google/KT1OEuOFxpElim98v" target="_blank">Αφήστε Κριτική στο Google</a></p>
+  </div>
+</section>
 
+<footer>
+  © Chania Private Cooking Services
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
+  }
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/306971620636" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #ffffff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 56px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  z-index: 1000;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+</style>
+
+</body>
+</html>
