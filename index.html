@@ -1,162 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chania Private Cooking Services | Private Chef in Crete</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Private Chef in Chania, Crete. Luxury private dining experiences in villas, private homes and special events.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #222;
-    }
+<title>Chania Private Cooking Services | Private Chefs in Crete</title>
+<meta name="description" content="Luxury private chef services in Chania, Crete. Tailor-made dining experiences in villas and private residences.">
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.65);
-      padding: 14px 24px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      z-index: 1000;
-    }
+<style>
+body {
+  margin:0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color:#222;
+  line-height:1.7;
+}
 
-    nav button {
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 6px 14px;
-      cursor: pointer;
-    }
+/* NAV */
+nav {
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  padding:14px 30px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+nav button {
+  margin-left:8px;
+  padding:6px 14px;
+  border:1px solid #fff;
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+}
 
-    /* HERO */
-    header {
-      min-height: 100vh;
-      background: url("images/hero.jpg") center/cover no-repeat;
-      position: relative;
-      color: #fff;
-      text-align: center;
-    }
+/* HERO */
+header {
+  min-height:100vh;
+  background:url('hero.jpg') center/cover no-repeat;
+  position:relative;
+  color:#fff;
+  text-align:center;
+}
+header::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+header .inner {
+  position:relative;
+  z-index:2;
+  padding:140px 20px;
+}
 
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
+.logo { max-width:180px; margin-bottom:30px; }
+.hero-title { font-size:42px; font-weight:700; }
+.hero-sub { font-size:18px; margin:18px 0 30px; }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 140px 20px 100px;
-    }
+.btn {
+  padding:12px 30px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+}
 
-    .logo {
-      max-width: 180px;
-      margin-bottom: 25px;
-    }
+/* SECTIONS */
+section {
+  max-width:1150px;
+  margin:auto;
+  padding:90px 20px;
+}
 
-    .hero-title {
-      font-size: 42px;
-      font-weight: bold;
-    }
+h2 {
+  font-size:32px;
+  margin-bottom:25px;
+}
 
-    .hero-sub {
-      font-size: 18px;
-      margin: 15px 0 30px;
-    }
+.split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      border: 1px solid #fff;
-      color: #fff;
-      text-decoration: none;
-    }
+/* LUXURY GALLERY */
+.luxury-gallery {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.luxury-gallery img {
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
+}
 
-    section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 90px 20px;
-    }
+/* CTA */
+.cta {
+  background:#111;
+  color:#fff;
+  text-align:center;
+}
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
+/* FOOTER */
+footer {
+  background:#f4f4f4;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+/* LANG */
+.lang { display:none; }
+.lang.active { display:block; }
 
-    .split img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  text-align:center;
+  line-height:56px;
+  font-size:28px;
+  text-decoration:none;
+}
 
-    .services,
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .services img,
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .cta {
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
-
-    footer {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    .lang { display: none; }
-    .lang.active { display: block; }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: #25D366;
-      color: #fff;
-      text-align: center;
-      font-size: 28px;
-      line-height: 56px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      z-index: 1000;
-    }
-
-    @media (max-width: 768px) {
-      .split { grid-template-columns: 1fr; }
-      .hero-title { font-size: 30px; }
-    }
-  </style>
+/* MOBILE */
+@media(max-width:900px){
+  .split { grid-template-columns:1fr; }
+  .luxury-gallery { grid-template-columns:1fr; }
+  .luxury-gallery img { height:320px; }
+  .hero-title { font-size:30px; }
+}
+</style>
 </head>
 
 <body>
@@ -167,83 +152,85 @@
 </nav>
 
 <header>
-  <div class="hero-content">
-    <img src="images/logo.png" class="logo" alt="Chania Private Cooking Services">
+  <div class="inner">
+    <img src="logo.png" class="logo" alt="Chania Private Cooking Services">
 
     <div class="lang en active">
       <div class="hero-title">Chania Private Cooking Services</div>
-      <div class="hero-sub">Your Private Chef in Crete<br>Luxury dining in villas & private homes</div>
-      <a href="#contact" class="btn">Contact Me</a>
+      <div class="hero-sub">Luxury Private Chefs in Crete<br>Tailor-made dining experiences</div>
+      <a href="#contact" class="btn">Contact Us</a>
     </div>
 
     <div class="lang gr">
       <div class="hero-title">Chania Private Cooking Services</div>
-      <div class="hero-sub">Ο Ιδιωτικός σας Σεφ στην Κρήτη<br>Γαστρονομικές εμπειρίες στον χώρο σας</div>
+      <div class="hero-sub">Luxury Private Chefs στην Κρήτη</div>
       <a href="#contact" class="btn">Επικοινωνία</a>
     </div>
   </div>
 </header>
 
 <section>
-  <div class="split">
-    <img src="images/chef.jpg" alt="Private Chef in Chania">
-    <div>
-      <div class="lang en active">
-        <h2>About Me</h2>
-        <p>I am a private chef based in Chania, Crete, specializing in high-end, tailor-made dining experiences for villas, private residences and special occasions.</p>
-        <p>My approach combines authentic Greek flavors with modern Mediterranean techniques, always focusing on premium ingredients, seasonality and refined presentation.</p>
-        <p>I handle everything — menu design, shopping, cooking and full kitchen cleanup — allowing you to relax and enjoy a seamless, restaurant-level experience in the comfort of your own space.</p>
-      </div>
+<div class="split">
+<img src="chef.jpg" style="width:100%;border-radius:18px">
 
-      <div class="lang gr">
-        <h2>Σχετικά με εμένα</h2>
-        <p>Είμαι private chef με έδρα τα Χανιά και εξειδικεύομαι σε υψηλού επιπέδου, προσωποποιημένες γαστρονομικές εμπειρίες σε βίλες, ιδιωτικές κατοικίες και ιδιαίτερες περιστάσεις.</p>
-        <p>Συνδυάζω αυθεντικές ελληνικές γεύσεις με σύγχρονες μεσογειακές τεχνικές, δίνοντας έμφαση στην ποιότητα των πρώτων υλών, την εποχικότητα και την κομψή παρουσίαση.</p>
-        <p>Αναλαμβάνω πλήρως τον σχεδιασμό μενού, τις αγορές, το μαγείρεμα και την παράδοση καθαρού χώρου, ώστε εσείς να απολαύσετε μια ολοκληρωμένη εμπειρία χωρίς άγχος.</p>
-      </div>
-    </div>
-  </div>
+<div class="lang en active">
+<h2>About Us</h2>
+<p>We are two professional private chefs based in Chania, Crete, specializing in high-end, tailor-made dining experiences for villas, private residences and exclusive occasions.</p>
+<p>Our culinary journey includes participation in MasterChef Greece (seasons 7 and 9), an experience that refined our creativity, technical precision and commitment to excellence.</p>
+<p>We combine authentic Greek flavors with modern Mediterranean techniques, focusing on premium seasonal ingredients, refined presentation and balanced menus.</p>
+<p>From menu design and ingredient sourcing to cooking and full kitchen clean-up, we manage every detail — allowing our guests to enjoy a seamless, stress-free dining experience.</p>
+</div>
+
+<div class="lang gr">
+<h2>Σχετικά με εμάς</h2>
+<p>Είμαστε δύο επαγγελματίες private chefs με έδρα τα Χανιά, με εξειδίκευση σε υψηλού επιπέδου γαστρονομικές εμπειρίες.</p>
+</div>
+</div>
 </section>
 
 <section>
-  <h2 style="text-align:center">Gallery</h2>
-  <div class="gallery">
-    <img src="images/gallery1.jpg">
-    <img src="images/gallery2.jpg">
-    <img src="images/gallery3.jpg">
-    <img src="images/gallery4.jpg">
-  </div>
+<h2 style="text-align:center">Gallery</h2>
+<div class="luxury-gallery">
+  <img src="images/gallery/1.jpg">
+  <img src="images/gallery/2.jpg">
+  <img src="images/gallery/3.jpg">
+  <img src="images/gallery/4.jpg">
+  <img src="images/gallery/5.jpg">
+  <img src="images/gallery/6.jpg">
+</div>
 </section>
 
 <section id="contact" class="cta">
-  <div class="lang en active">
-    <h2>Contact</h2>
-    <p>Email: danagnostopoulos69@gmail.com</p>
-    <p>WhatsApp: +30 697 162 0636</p>
-  </div>
+<div class="lang en active">
+<h2>Contact</h2>
+<p>Email: danagnostopoulos69@gmail.com</p>
+<p>WhatsApp: +30 697 162 0636</p>
+</div>
 
-  <div class="lang gr">
-    <h2>Επικοινωνία</h2>
-    <p>Email: danagnostopoulos69@gmail.com</p>
-    <p>WhatsApp: +30 697 162 0636</p>
-  </div>
+<div class="lang gr">
+<h2>Επικοινωνία</h2>
+<p>Email: danagnostopoulos69@gmail.com</p>
+<p>WhatsApp: +30 697 162 0636</p>
+</div>
 </section>
 
 <footer>
-  © Chania Private Cooking Services
+© Chania Private Cooking Services
 </footer>
 
-<a href="https://wa.me/306971620636" class="whatsapp" target="_blank">💬</a>
+<a href="https://wa.me/306971620636" class="whatsapp">💬</a>
 
 <script>
-  function setLang(lang) {
-    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
-  }
+function setLang(lang){
+  document.querySelectorAll('.lang').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.'+lang).forEach(e=>e.classList.add('active'));
+}
 </script>
 
 </body>
 </html>
+
+
 
 
 
