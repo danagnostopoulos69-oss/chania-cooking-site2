@@ -1,132 +1,55 @@
-<<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chania Private Cooking Services | Private Chef in Crete</title>
-  <meta name="description" content="Private Chef services in Chania, Crete. Authentic Greek & Mediterranean cuisine in villas and private events." />
+  <meta name="description" content="Luxury private chef services in Chania, Crete. Authentic Greek & Mediterranean cuisine in villas, events and private homes." />
 
   <style>
     body { font-family: 'Helvetica Neue', Arial, sans-serif; margin:0; line-height:1.6; color:#222; }
 
-    /* NAV */
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      padding: 14px 24px;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(6px);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; justify-content: flex-end; gap: 8px;
+      padding: 14px 24px; background: rgba(0,0,0,0.65); backdrop-filter: blur(6px);
     }
-    nav button {
-      padding: 6px 14px;
-      background: transparent;
-      border: 1px solid #fff;
-      color: #fff;
-      cursor: pointer;
-    }
+    nav button { padding: 6px 14px; background: transparent; border: 1px solid #fff; color: #fff; cursor: pointer; }
 
-    /* HERO */
-    header {
-      position: relative;
-      min-height: 100vh;
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-    header .inner {
-      position: relative;
-      z-index: 2;
-      padding: 140px 20px 100px;
-    }
+    header { position: relative; min-height: 100vh; background-size: cover; background-position: center; color: #fff; text-align: center; }
+    header::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+    header .inner { position: relative; z-index: 2; padding: 140px 20px 100px; }
 
     .logo { max-width: 180px; margin-bottom: 25px; }
     .hero-title { font-size: 42px; font-weight: 700; margin-bottom: 10px; }
     .hero-sub { font-size: 18px; margin-bottom: 25px; }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      border: 1px solid #fff;
-      color: #fff;
-      text-decoration: none;
-    }
+    .btn { display: inline-block; padding: 12px 28px; border: 1px solid #fff; color: #fff; text-decoration: none; }
 
-    /* SECTIONS */
     section { padding: 90px 20px; max-width: 1150px; margin: auto; }
     h2 { font-size: 32px; margin-bottom: 20px; }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 12px; }
 
-    /* GALLERY */
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-    }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .gallery img { width: 100%; border-radius: 14px; }
 
-    /* CTA */
-    .cta {
-      background: #111;
-      color: #fff;
-      text-align: center;
-    }
+    .cta { background: #111; color: #fff; text-align: center; }
 
-    footer {
-      background: #f4f4f4;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
+    footer { background: #f4f4f4; padding: 20px; text-align: center; font-size: 14px; }
 
-    /* LANG */
     .lang { display: none; }
     .lang.active { display: block; }
 
-    /* WHATSAPP */
     .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 28px;
-      line-height: 56px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      z-index: 1000;
-      text-decoration: none;
+      position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: #fff;
+      width: 56px; height: 56px; border-radius: 50%; text-align: center; font-size: 28px;
+      line-height: 56px; box-shadow: 0 4px 10px rgba(0,0,0,0.25); z-index: 1000; text-decoration: none;
     }
 
     @media (max-width: 768px) {
@@ -137,86 +60,52 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('gr')">GR</button>
 </nav>
 
-<!-- HERO -->
 <header style="background-image:url('hero.jpg');">
   <div class="inner">
     <img src="logo.png" class="logo" alt="Chania Private Cooking Services" />
 
     <div class="lang en active">
       <div class="hero-title">Chania Private Cooking Services</div>
-      <div class="hero-sub">Your Private Chef in Crete<br>Luxury dining in villas & private homes</div>
+      <div class="hero-sub">Private Chef in Crete<br>Tailor-made dining experiences in your villa</div>
       <a class="btn" href="#contact">Contact Me</a>
     </div>
 
     <div class="lang gr">
       <div class="hero-title">Chania Private Cooking Services</div>
-      <div class="hero-sub">Ο Ιδιωτικός σας Σεφ στην Κρήτη<br>Γαστρονομικές εμπειρίες στον χώρο σας</div>
+      <div class="hero-sub">Ιδιωτικός Σεφ στην Κρήτη<br>Προσωποποιημένες γαστρονομικές εμπειρίες</div>
       <a class="btn" href="#contact">Επικοινωνία</a>
     </div>
   </div>
 </header>
 
-<!-- ABOUT -->
 <section>
   <div class="split">
     <img src="chef.jpg" alt="Private Chef in Chania" style="width:100%;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.3)">
     <div>
       <div class="lang en active">
-        <h2>About the Chef</h2>
-        <p>Private chef based in Chania, Crete, offering tailor‑made dining experiences in villas and private homes. From authentic Greek cuisine to modern Mediterranean menus, every detail is carefully designed.</p>
+        <h2>About Me</h2>
+        <p>I am a private chef based in Chania, Crete, specializing in exclusive dining experiences within villas and private residences. My philosophy is centered on high-quality local ingredients, authentic Greek flavors, and refined Mediterranean techniques.</p>
+        <p>Each menu is custom-designed to reflect your preferences, the occasion, and the atmosphere you wish to create — whether it is an intimate dinner, a family gathering, or a special celebration.</p>
       </div>
       <div class="lang gr">
         <h2>Σχετικά με εμένα</h2>
-        <p>Private chef με έδρα τα Χανιά, με εξειδίκευση σε προσωποποιημένες γαστρονομικές εμπειρίες σε βίλες και ιδιωτικές κατοικίες.</p>
+        <p>Είμαι ιδιωτικός σεφ με έδρα τα Χανιά και εξειδίκευση σε υψηλού επιπέδου γαστρονομικές εμπειρίες σε βίλες και ιδιωτικές κατοικίες. Δουλεύω αποκλειστικά με ποιοτικές πρώτες ύλες και αυθεντικές ελληνικές και μεσογειακές γεύσεις.</p>
+        <p>Κάθε μενού σχεδιάζεται εξατομικευμένα, με βάση τις προτιμήσεις σας, την περίσταση και την εμπειρία που θέλετε να ζήσετε.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section>
-  <div class="lang en active">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card"><img src="service1.jpg"><h3>Private Chef in Villas</h3></div>
-      <div class="card"><img src="service2.jpg"><h3>Family & Friends Dining</h3></div>
-      <div class="card"><img src="service3.jpg"><h3>Romantic Dinners</h3></div>
-      <div class="card"><img src="service4.jpg"><h3>Events & Celebrations</h3></div>
-    </div>
-  </div>
-
-  <div class="lang gr">
-    <h2>Υπηρεσίες</h2>
-    <div class="services">
-      <div class="card"><h3>Private Chef σε Βίλες</h3></div>
-      <div class="card"><h3>Οικογενειακά Γεύματα</h3></div>
-      <div class="card"><h3>Ρομαντικά Δείπνα</h3></div>
-      <div class="card"><h3>Εκδηλώσεις</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
 <section>
   <h2 style="text-align:center">Gallery</h2>
-  <div class="services gallery">
-    <img src="gallery1.jpg">
-    <img src="gallery2.jpg">
-    <img src="gallery3.jpg">
-    <img src="gallery4.jpg">
-    <img src="gallery5.jpg">
-    <img src="gallery6.jpg">
-    <img src="gallery7.jpg">
-  </div>
+  <div id="gallery" class="gallery"></div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="cta">
   <div class="lang en active">
     <h2>Contact</h2>
@@ -239,11 +128,21 @@
     document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
   }
+
+  const galleryContainer = document.getElementById('gallery');
+  const totalImages = 30; // απλά αυξάνεις αυτόν τον αριθμό
+
+  for (let i = 1; i <= totalImages; i++) {
+    const img = document.createElement('img');
+    img.src = `gallery/gallery${i}.jpg`;
+    img.alt = 'Private Chef Gallery';
+    img.onerror = () => img.remove();
+    galleryContainer.appendChild(img);
+  }
 </script>
 
 </body>
 </html>
-
 
 
 
